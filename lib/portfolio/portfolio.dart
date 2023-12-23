@@ -1,4 +1,3 @@
-import 'package:enefty_icons/enefty_icons.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,8 +11,9 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Text("data"),
-      ),
+          leading: const ImageIcon(
+            AssetImage("assets/images/imageui4.png"),
+      ),),
       body: Padding(
         padding: const EdgeInsets.all(5.0),
         child: ListView(
@@ -96,10 +96,12 @@ class Portfolio extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Icon(FeatherIcons.github, color: Colors.green, size: 50),
+                        Icon(FeatherIcons.github,
+                            color: Colors.green, size: 50),
                         Icon(FeatherIcons.linkedin,
                             color: Colors.green, size: 50),
-                        Icon(FeatherIcons.twitter, color: Colors.green, size: 50),
+                        Icon(FeatherIcons.twitter,
+                            color: Colors.green, size: 50),
                       ],
                     )
                   ],
@@ -302,7 +304,8 @@ class Portfolio extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 15,
-                                  color: const Color.fromARGB(217, 255, 255, 255),
+                                  color:
+                                      const Color.fromARGB(217, 255, 255, 255),
                                   fontFamily: GoogleFonts.dmSans().fontFamily),
                             ),
                             const SizedBox(
@@ -314,7 +317,8 @@ class Portfolio extends StatelessWidget {
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.green,
                                       shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8)),
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
                                       elevation: 0),
                                   onPressed: () {},
                                   child: Padding(
@@ -397,7 +401,8 @@ class Portfolio extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 15,
-                                  color: const Color.fromARGB(217, 255, 255, 255),
+                                  color:
+                                      const Color.fromARGB(217, 255, 255, 255),
                                   fontFamily: GoogleFonts.dmSans().fontFamily),
                             ),
                             const SizedBox(
@@ -420,8 +425,8 @@ class Portfolio extends StatelessWidget {
                                         child: Text(
                                           "Explore Project",
                                           style: TextStyle(
-                                              fontFamily:
-                                                  GoogleFonts.dmSans().fontFamily,
+                                              fontFamily: GoogleFonts.dmSans()
+                                                  .fontFamily,
                                               color: Colors.white,
                                               fontSize: 17),
                                         ),
@@ -451,10 +456,11 @@ class Portfolio extends StatelessWidget {
                                     ),
                                     OutlinedButton(
                                       style: OutlinedButton.styleFrom(
-                                        side:
-                                            const BorderSide(color: Colors.green),
+                                        side: const BorderSide(
+                                            color: Colors.green),
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
                                         ),
                                       ),
                                       onPressed: () {},
@@ -477,87 +483,320 @@ class Portfolio extends StatelessWidget {
                     ]),
               ),
             ),
-            Image.asset(
-              'assets/images/imageui2.png',
-              height: 250,
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+              height: 300,
+              child: Image.asset(
+                'assets/images/imageui2.png',
+                width: 300,
+                height: 700,
+              ),
             ),
-            const SizedBox(
-              height: 100,
-            ),
+            
             SizedBox(
-              height: 500,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: GridView.count(
-                  crossAxisSpacing: 40,
-                  mainAxisSpacing: 40,
+              height: 370,
+              child: GridView.count(
+                shrinkWrap: true,
+                  padding: const EdgeInsets.all(50),
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 5,
                   crossAxisCount: 2,
                   physics: const NeverScrollableScrollPhysics(),
                   children: [
-                    Center(
-                      child: RichText(
+                    RichText(
                         text: TextSpan(
-                          text: "10+\n",
-                          style:const TextStyle(
-                              fontFamily: 'EngeHolzschrift', fontSize: 50),
-                              children: <TextSpan>[
-                                TextSpan(text: "Clients", style: TextStyle(
-                                  fontFamily: GoogleFonts.dmSans().fontFamily,
-                                  fontSize: 30
-                                  ),),
-                              ]
-                        ),
+                            text: "10+\n",
+                            style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift', fontSize: 50),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: "Clients",
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 25),
+                              ),
+                            ]),
                       ),
-                    ),
-                    Center(
-                      child: RichText(
+                    
+                    RichText(
                         text: TextSpan(
-                          text: "5+\n",
-                          style:const TextStyle(
-                              fontFamily: 'EngeHolzschrift', fontSize: 50),
-                              children: <TextSpan>[
-                                TextSpan(text: "Projects              ", style: TextStyle(
-                                  fontFamily: GoogleFonts.dmSans().fontFamily,
-                                  fontSize: 30
-                                  ),),
-                              ]
-                        ),
+                            text: "5+\n",
+                            style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift', fontSize: 50),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: "Projects",
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 25),
+                              ),
+                            ]),
                       ),
-                    ),
-                    Center(
-                      child: RichText(
+                    RichText(
                         text: TextSpan(
-                          text: "10+\n",
-                          style:const TextStyle(
-                              fontFamily: 'EngeHolzschrift', fontSize: 50),
-                              children: <TextSpan>[
-                                TextSpan(text: "Clients", style: TextStyle(
-                                  fontFamily: GoogleFonts.dmSans().fontFamily,
-                                  fontSize: 30
-                                  ),),
-                              ]
-                        ),
+                            text: "10+\n",
+                            style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift', fontSize: 50),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: "Clients",
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 25),
+                              ),
+                            ]),
                       ),
-                    ),
-                    Center(
-                      child: RichText(
+                    RichText(
                         text: TextSpan(
-                          text: "2+\n",
-                          style:const TextStyle(
-                              fontFamily: 'EngeHolzschrift', fontSize: 50),
+                            text: "2+\n",
+                            style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift', fontSize: 50),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: "Experience",
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 25),
+                              ),
+                            ]),
+                      ),
+                  ],
+                ),
+              ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 580,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                          text: "EDUCATION\n",
+                          style: const TextStyle(
+                              fontFamily: 'EngeHolzschrift',
+                              fontSize: 60,
+                              color: Colors.green),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text:
+                                    "Educational Journey: My Professional Development and Accomplishment",
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    color: Colors.white,
+                                    fontSize: 20))
+                          ]),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      height: 420,
+                      child: GridView.count(
+                        shrinkWrap: false,
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 5,
+                        crossAxisSpacing: 5,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              text: "2021 - Present\n",
+                              style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift',
+                                fontSize: 40,
+                              ),
                               children: <TextSpan>[
-                                TextSpan(text: "Experience", style: TextStyle(
-                                  fontFamily: GoogleFonts.dmSans().fontFamily,
-                                  fontSize: 30
-                                  ),),
-                              ]
-                        ),
+                                TextSpan(
+                                  text: "Poornima University",
+                                  style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                const TextSpan(
+                                  text: "\n8.9 gpa",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              text: "2020 - 2021\n",
+                              style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift',
+                                fontSize: 40,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Bhai Parmanand \nVidya Mandir, Delhi",
+                                  style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                const TextSpan(
+                                  text: "\n85%",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              text: "2019 - 2020\n",
+                              style: const TextStyle(
+                                fontFamily: 'EngeHolzschrift',
+                                fontSize: 40,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Bhai Parmanand \nVidya Mandir, Delhi",
+                                  style: TextStyle(
+                                    fontFamily: GoogleFonts.dmSans().fontFamily,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                const TextSpan(
+                                  text: "\n89%",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 300,
+              child: Image.asset('assets/images/imageui3.png'),
+            ),
+            SizedBox(
+              height: 1000,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                        text: "SKILLS",
+                        style: const TextStyle(
+                          fontFamily: 'EngeHolzschrift',
+                          fontSize: 60,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text:
+                                "\nExpertise in Various Tools and Technologies: A look into My Skill Set",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ]),
+                  ),
+                  Container(height: 873,decoration: BoxDecoration(color: Colors.blueAccent),)
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 420,
+              child: Center(
+                child: GridView.count(
+                  shrinkWrap: true,
+                  padding: const EdgeInsets.all(30),
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 15,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        text: "Address\n",
+                        style: const TextStyle(
+                          fontFamily: 'EngeHolzschrift',
+                          fontSize: 40,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "Jaipur, India",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: "Phone\n",
+                        style: const TextStyle(
+                          fontFamily: 'EngeHolzschrift',
+                          fontSize: 40,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "+91 82853 80492",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: "E-Mail\n",
+                        style: const TextStyle(
+                          fontFamily: 'EngeHolzschrift',
+                          fontSize: 40,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "kartik11buttan@gmail.com",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: "Whatsapp\n",
+                        style: const TextStyle(
+                          fontFamily: 'EngeHolzschrift',
+                          fontSize: 40,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "+91 82853 80492",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.dmSans().fontFamily,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
